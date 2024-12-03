@@ -15,15 +15,12 @@
       "url": "https://github.com/Zoomicon/Zoomicon.Helpers.RTL.Delphi"
     },
     "main": "Source/Zoomicon.Helpers.RTL.dproj",
-    //"test": "Test/Zoomicon.Helpers.RTL.Test.dproj",
 
     "projects": [
       "Source/Zoomicon.Helpers.RTL.dproj",
-      //"Test/Zoomicon.Helpers.RTL.Test.dproj"
     ],
     "files": [
-      "Source/**/*.pas",
-      "Test/**/*.pas"
+      "Source/**/*.pas"
     ]
   }
 }
