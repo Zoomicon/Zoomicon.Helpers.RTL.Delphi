@@ -197,10 +197,10 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="rtl.dcp"/>
-        <DCCReference Include="Zoomicon.Helpers.RTL\Zoomicon.Helpers.RTL.ClassListHelpers.pas"/>
-        <DCCReference Include="Zoomicon.Helpers.RTL\Zoomicon.Helpers.RTL.StreamHelpers.pas"/>
-        <DCCReference Include="Zoomicon.Helpers.RTL\Zoomicon.Helpers.RTL.ComponentHelpers.pas"/>
-        <DCCReference Include="Zoomicon.Helpers.RTL\Zoomicon.Helpers.RTL.StringsHelpers.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.RTL.ClassListHelpers.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.RTL.ComponentHelpers.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.RTL.StreamHelpers.pas"/>
+        <DCCReference Include="Zoomicon.Helpers.RTL.StringsHelpers.pas"/>
         <None Include="..\boss.json"/>
         <None Include="..\LICENSE"/>
         <None Include="..\README.md"/>
