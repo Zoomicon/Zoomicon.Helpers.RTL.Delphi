@@ -1,26 +1,26 @@
 {
-  "package": {
-    "name": "Zoomicon.Helpers.RTL",
-    "version": "1.2",
+  "name": "Zoomicon.Helpers.RTL",
+  "version": "3.0",
 
-    "description": "Helpers for Delphi RTL (Run-Time Library)",
+  "description": "Helpers for Delphi RTL (Run-Time Library)",
 
-    "author": "George Birbilis - Zoomicon.com",
-    "license": "MIT",
+  "author": "George Birbilis - Zoomicon.com",
+  "license": "MIT",
     
-    "dependencies": {}, 
+  "dependencies": {}, 
 
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/Zoomicon/Zoomicon.Helpers.RTL.Delphi"
-    },
-    "main": "Source/Zoomicon.Helpers.RTL.dproj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zoomicon/Zoomicon.Helpers.RTL.Delphi"
+  },
 
-    "projects": [
-      "Source/Zoomicon.Helpers.RTL.dproj",
-    ],
-    "files": [
-      "Source/**/*.pas"
-    ]
-  }
+  "main": "Source/Zoomicon.Helpers.RTL.dproj",
+
+  "projects": [
+    "Source/Zoomicon.Helpers.RTL.dproj",
+  ],
+
+  "files": [
+    "Source/**/*.pas"
+  ]
 }
