@@ -57,7 +57,7 @@ end;
       else
       FoundEncoding := nil; //doc for TEncoding.GetBufferEncoding writes: "The AEncoding parameter should have the value NIL, otherwise its value is used to detect the encoding" //Note: Delphi doesn't auto-initialize local variables, so we need to explicitly set to nil
     var BOMLength := TEncoding.GetBufferEncoding(Buff, FoundEncoding, DefaultEncoding);
-    result := FoundEncoding.GetString(Buff, BOMLength, Length(Buff) - BOMLength);
+    result := FoundEncoding.GetString(Buff, BOMLength, Length(Buff) - BOMLength); //TODO: not sure if this will do transcoding if the real encoding of the file was different from DefaultEncoding and we used ForceDefaultEncoding=true - may need to implement it somehow
   end;
 
 {$ENDREGION}
