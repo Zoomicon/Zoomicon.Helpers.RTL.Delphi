@@ -39,21 +39,23 @@ end;
 
   function TStreamReadAllHelper.ReadAllBytes: TBytes;
   begin
-    var LFileSize := Size;
+    var LDataSize := Size; //TStream.Size is Int64
     {$IFDEF CPU32BITS}
-    if LFileSize > MaxInt then
-      raise EInOutError.CreateRes(@SFileTooLong);
+    if LDataSize > MaxInt then
+      raise EInOutError.CreateRes(@SFileTooLong); //need to check this, since TStream.SetLength accepts Integer which has platform-specific size
     {$ENDIF}
-    SetLength(Result, LFileSize);
+    SetLength(Result, LDataSize);
     ReadBuffer(result, Length(result));
   end;
 
   function TStreamReadAllHelper.ReadAllText(const DefaultEncoding: TEncoding = nil; const ForceDefaultEncoding: Boolean = false): string;
   var FoundEncoding: TEncoding;
   begin
-    if ForceDefaultEncoding then
-      FoundEncoding := DefaultEncoding;
     var Buff := ReadAllBytes;
+    if ForceDefaultEncoding then
+      FoundEncoding := DefaultEncoding
+      else
+      FoundEncoding := nil; //doc for TEncoding.GetBufferEncoding writes: "The AEncoding parameter should have the value NIL, otherwise its value is used to detect the encoding" //Note: Delphi doesn't auto-initialize local variables, so we need to explicitly set to nil
     var BOMLength := TEncoding.GetBufferEncoding(Buff, FoundEncoding, DefaultEncoding);
     result := FoundEncoding.GetString(Buff, BOMLength, Length(Buff) - BOMLength);
   end;
