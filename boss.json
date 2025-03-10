@@ -17,7 +17,7 @@
   "main": "Source/Zoomicon.Helpers.RTL.dproj",
 
   "projects": [
-    "Source/Zoomicon.Helpers.RTL.dproj",
+    "Source/Zoomicon.Helpers.RTL.dproj"
   ],
 
   "files": [
