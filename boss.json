@@ -1,12 +1,12 @@
 {
   "name": "Zoomicon.Helpers.RTL",
-  "version": "3.1",
+  "version": "3.2",
 
   "description": "Helpers for Delphi RTL (Run-Time Library)",
 
   "author": "George Birbilis - Zoomicon.com",
   "license": "MIT",
-    
+
   "dependencies": {}, 
 
   "repository": {
