@@ -10,6 +10,8 @@ interface
       function Ext: String;
     end;
 
+    function IsURI(const Value: String): Boolean;
+
     function ExtractUrlExt(const Url: TURI): String; overload;
     function ExtractUrlExt(const Url: String): String; overload;
 
@@ -27,6 +29,11 @@ implementation
   {$ENDREGION}
 
   {$REGION 'Helpers'}
+
+  function IsURI(const Value: String): Boolean;
+  begin
+    Result := Value.StartsWith('http://', true) or Value.StartsWith('https://', true); //TODO: a bit naive implementation
+  end;
 
   function ExtractUrlExt(const Url: TURI): String;
   begin
@@ -47,14 +54,8 @@ implementation
     if FileName.IsEmpty then
       Exit;
 
-    // Extract extension (".png")
-    var Ext := ExtractFileExt(FileName);
-
-    if Ext.IsEmpty then
-      Exit;
-
-    // Remove leading dot
-    Result := Ext.Substring(1);
+    // Extract extension INCLUDING the dot (".png")
+    Result := ExtractFileExt(FileName);
   end;
 
   function ExtractUrlExt(const Url: String): String;
