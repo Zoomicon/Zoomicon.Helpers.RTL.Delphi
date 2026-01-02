@@ -34,6 +34,7 @@ contains
   Zoomicon.Helpers.RTL.ClassListHelpers in 'Zoomicon.Helpers.RTL.ClassListHelpers.pas',
   Zoomicon.Helpers.RTL.ComponentHelpers in 'Zoomicon.Helpers.RTL.ComponentHelpers.pas',
   Zoomicon.Helpers.RTL.StreamHelpers in 'Zoomicon.Helpers.RTL.StreamHelpers.pas',
-  Zoomicon.Helpers.RTL.StringsHelpers in 'Zoomicon.Helpers.RTL.StringsHelpers.pas';
+  Zoomicon.Helpers.RTL.StringsHelpers in 'Zoomicon.Helpers.RTL.StringsHelpers.pas',
+  Zoomicon.Helpers.RTL.URIHelpers in 'Zoomicon.Helpers.RTL.URIHelpers.pas';
 
 end.
